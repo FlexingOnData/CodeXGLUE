@@ -1,5 +1,5 @@
-$pretrained_model = microsoft/codebert-base
-$output_dir = "saved_models/"
+pretrained_model=microsoft/codebert-base
+output_dir=saved_models/
 python run.py \
 	--do_train \
 	--do_eval \
@@ -13,8 +13,8 @@ python run.py \
 	--max_source_length 512 \
 	--max_target_length 512 \
 	--beam_size 5 \
-	--train_batch_size 16 \
-	--eval_batch_size 16 \
-	--learning_rate lr=5e-5 \
+	--train_batch_size 8 \
+	--eval_batch_size 8 \
+	--learning_rate 5e-5 \
 	--train_steps 100000 \
 	--eval_steps 5000
